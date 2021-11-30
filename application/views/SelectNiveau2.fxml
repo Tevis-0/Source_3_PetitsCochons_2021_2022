@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" prefHeight="792.0" prefWidth="1408.0" stylesheets="@../../ressources/css/menu.css" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.SelectNiveauController">
+   <children>
+      <VBox alignment="CENTER" layoutX="104.0" layoutY="72.0" prefHeight="608.0" prefWidth="552.0" spacing="100.0">
+         <children>
+            <ImageView fx:id="diurneButton" fitHeight="170.0" fitWidth="516.0" onMouseClicked="#clickButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/diurne_select.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nocturneButton" fitHeight="170.0" fitWidth="516.0" onMouseClicked="#clickButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/nocturne_nonselect.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="774.0" layoutY="215.0" prefHeight="258.0" prefWidth="352.0">
+         <children>
+            <ImageView fx:id="roue" fitHeight="362.0" fitWidth="460.0" onMouseClicked="#clickRoue" onMouseMoved="#hoverRoue" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/roue.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="aiguille" fitHeight="210.0" fitWidth="85.0" layoutX="193.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/aiguille.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="752.0" layoutY="670.0" prefHeight="74.0" prefWidth="413.0">
+         <children>
+            <ImageView fitHeight="138.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/button_2.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="jouerButton" alignment="CENTER" layoutX="4.0" layoutY="5.0" onMouseClicked="#clickJouer" prefHeight="86.0" prefWidth="492.0" text="LANCER LE DÉFI" textFill="WHITE">
+               <font>
+                  <Font size="39.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="loadImg" fitHeight="70.0" fitWidth="70.0" layoutX="1313.0" layoutY="683.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <image>
+            <Image url="@../../ressources/images/load.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

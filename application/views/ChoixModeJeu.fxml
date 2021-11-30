@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" prefHeight="792.0" prefWidth="1408.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ChoixModeJeuController">
+   <children>
+      <AnchorPane>
+         <children>
+            <fx:include fx:id="barreJoueur" source="BarreJoueur.fxml" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="parametreBouton" layoutX="50.0" layoutY="707.0" onMouseClicked="#clickSettings" prefHeight="52.0" prefWidth="340.0">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="336.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/button_2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="70.0" layoutY="15.0" text="PARAMÈTRES" textFill="WHITE">
+               <font>
+                  <Font name="GROBOLD" size="29.0" />
+               </font>
+               <effect>
+                  <DropShadow height="15.0" radius="7.0" width="15.0" />
+               </effect>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <VBox layoutX="308.0" layoutY="175.0" spacing="25.0">
+         <children>
+            <AnchorPane fx:id="entrainementButton" onMouseClicked="#clickEntrainement" prefHeight="151.0" prefWidth="755.0">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="820.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="164.0" layoutY="39.0" text="ENTRAINEMENT" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="59.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane fx:id="progressionButton" onMouseClicked="#clickProgression" prefHeight="151.0" prefWidth="755.0">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="820.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="183.0" layoutY="39.0" text="PROGRESSION" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="59.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane fx:id="competitionButton" onMouseClicked="#clickCompetition" prefHeight="151.0" prefWidth="755.0">
+               <children>
+                  <ImageView fitHeight="151.0" fitWidth="820.0" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_1.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="192.0" layoutY="39.0" text="COMPÉTITION" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="59.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <ImageView fx:id="decoButton" fitHeight="100.0" fitWidth="100.0" layoutX="1294.0" layoutY="678.0" onMouseClicked="#clickDeco" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../ressources/images/connexion_btn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="retourButton" fitHeight="100.0" fitWidth="100.0" layoutX="26.0" layoutY="175.0" onMouseClicked="#clickRetour" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="175.0">
+         <image>
+            <Image url="@../../ressources/images/cancel_btn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

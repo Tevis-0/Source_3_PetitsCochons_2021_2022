@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" prefHeight="792.0" prefWidth="1408.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.TableauProgressionController">
+   <children>
+   <AnchorPane>
+         <children>
+            <fx:include fx:id="barreJoueur" source="BarreJoueur.fxml" />
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutY="284.0" prefHeight="483.0" prefWidth="1408.0">
+         <children>
+            <GridPane fx:id="tableau" hgap="20.0" maxHeight="460.0" prefHeight="460.0" prefWidth="920.0" vgap="20.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="100.0" minHeight="3.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="Starter">
+                     <font>
+                        <Font name="GROBOLD" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label text="Junior" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="GROBOLD" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label text="Expert" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="GROBOLD" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label text="Master" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="GROBOLD" size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <VBox fx:id="infosVB" alignment="CENTER" prefHeight="531.0" prefWidth="370.0">
+               <children>
+                  <Label text="Record">
+                     <font>
+                        <Font name="GROBOLD" size="37.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="recordLB" text="-">
+                     <font>
+                        <Font name="GROBOLD" size="25.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <FlowPane alignment="CENTER" hgap="50.0" layoutX="210.0" layoutY="175.0" prefHeight="103.0" prefWidth="656.0">
+         <children>
+            <ImageView fx:id="diurneButton" fitHeight="105.0" fitWidth="284.0" onMouseClicked="#clickDiurne" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/diurne_select.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="nocturneButton" fitHeight="105.0" fitWidth="284.0" onMouseClicked="#clickNocturne" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../ressources/images/nocturne_nonselect.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </FlowPane>
+      <ImageView fx:id="loading" fitHeight="70.0" fitWidth="70.0" layoutX="1324.0" layoutY="706.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../ressources/images/load.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="retourButton" fitHeight="100.0" fitWidth="100.0" layoutY="175.0" onMouseClicked="#clickRetour" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="175.0">
+         <image>
+            <Image url="@../../ressources/images/cancel_btn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

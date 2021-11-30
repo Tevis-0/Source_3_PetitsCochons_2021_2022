@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cadre" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CadreMessageOuiNonController">
+   <children>
+      <HBox alignment="CENTER" layoutX="28.0" layoutY="287.0" prefHeight="44.0" prefWidth="345.0" spacing="20.0">
+         <children>
+            <AnchorPane prefHeight="56.0" prefWidth="123.0">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="126.0" layoutX="-1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_5.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="ouiButton" alignment="CENTER" layoutX="1.0" layoutY="-2.0" onMouseClicked="#buttonOuiClick" prefHeight="54.0" prefWidth="125.0" text="OUI" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="24.0" />
+                        
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="32.0" prefWidth="126.0">
+               <children>
+                  <ImageView fitHeight="47.0" fitWidth="126.0" layoutX="-1.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_5.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nonButton" alignment="CENTER" layoutX="1.0" layoutY="-2.0" onMouseClicked="#buttonNonClick" prefHeight="54.0" prefWidth="125.0" text="NON" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Label fx:id="message" alignment="CENTER" layoutX="68.0" layoutY="65.0" prefHeight="175.0" prefWidth="265.0" text="Message à afficher" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

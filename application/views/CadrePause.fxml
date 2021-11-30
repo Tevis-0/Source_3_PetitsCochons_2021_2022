@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cadre" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.CadrePauseController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="400.0" spacing="30.0">
+         <children>
+            <AnchorPane prefHeight="65.0" prefWidth="367.0">
+               <children>
+                  <ImageView fx:id="reprendreButton" fitHeight="65.0" fitWidth="304.0" layoutX="48.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_1.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="reprendreLabel" alignment="CENTER" layoutX="48.0" layoutY="3.0" onMouseClicked="#clickReprendreButton" prefHeight="59.0" prefWidth="304.0" text="REPRENDRE" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="27.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane opacity="0.5" prefHeight="65.0" prefWidth="376.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="304.0" layoutX="48.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_2.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="optionsLabel" alignment="CENTER" layoutX="48.0" layoutY="2.0" onMouseClicked="#clickOptionsButton" prefHeight="59.0" prefWidth="304.0" text="OPTIONS" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="27.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane prefHeight="65.0" prefWidth="376.0">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="304.0" layoutX="48.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/button_3.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="quitterLabel" alignment="CENTER" layoutX="48.0" layoutY="3.0" onMouseClicked="#clickQuitterButton" prefHeight="59.0" prefWidth="304.0" text="QUITTER" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="27.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
