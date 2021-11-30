@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="cadre" focusTraversable="true" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.AppuieToucheController">
+   <children>
+      <ImageView fx:id="closeButton" fitHeight="75.0" fitWidth="75.0" layoutX="516.0" layoutY="14.0" onMouseClicked="#clickCloseButton" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <image>
+            <Image url="@../../ressources/images/quitt_btn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="90.0" layoutY="130.0" prefHeight="170.0" prefWidth="421.0" text="Appuie sur une touche pour l'associer à :" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="GROBOLD" size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="messageLB" alignment="CENTER" layoutX="90.0" layoutY="305.0" prefHeight="98.0" prefWidth="421.0" text="Déplacer la pièce vers la gauche" textAlignment="CENTER" textFill="#ffee8e" wrapText="true">
+         <font>
+            <Font name="GROBOLD" size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="90.0" layoutY="398.0" prefHeight="119.0" prefWidth="421.0" text="ou appuie sur ÉCHAP pour annuler" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="GROBOLD" size="41.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="191.0" layoutY="74.0" prefHeight="50.0" prefWidth="220.0" text="Touche invalide" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="GROBOLD" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

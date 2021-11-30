@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" prefHeight="792.0" prefWidth="1408.0" xmlns="http://javafx.com/javafx/8.0.301" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.ClassementController">
+   <children>
+   <AnchorPane>
+         <children>
+            <fx:include fx:id="barreJoueur" source="BarreJoueur.fxml" />
+         </children>
+      </AnchorPane>
+      <HBox fx:id="hb" alignment="CENTER" layoutX="150.0" layoutY="189.0" prefHeight="572.0" prefWidth="1109.0" spacing="40.0">
+         <children>
+            <VBox fx:id="classement" alignment="CENTER" prefHeight="524.0" prefWidth="694.0">
+               <children>
+                  <Label fx:id="titre" text="CLASSEMENT CONTEXTE NIVEAU" textFill="WHITE">
+                     <font>
+                        <Font name="GROBOLD" size="33.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox fx:id="entete" prefHeight="37.0" prefWidth="520.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="37.0" prefWidth="50.0" text="Rang" textAlignment="CENTER">
+                           <font>
+                              <Font name="GROBOLD" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="295.0" text="Joueur" textAlignment="CENTER">
+                           <font>
+                              <Font name="GROBOLD" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="70.0" text="Niveau" textAlignment="CENTER">
+                           <font>
+                              <Font name="GROBOLD" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="176.0" text="Temps (secondes)" textAlignment="CENTER">
+                           <font>
+                              <Font name="GROBOLD" size="19.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="optionsSelect" alignment="CENTER" prefHeight="529.0" prefWidth="376.0" spacing="15.0">
+               <children>
+                  <ImageView fx:id="diurneButton" fitHeight="108.0" fitWidth="428.0" onMouseClicked="#clickButton" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/diurne_select.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fx:id="nocturneButton" fitHeight="108.0" fitWidth="428.0" onMouseClicked="#clickButton" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../ressources/images/nocturne_nonselect.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="roue" fitHeight="302.0" fitWidth="485.0" layoutX="-4.0" onMouseClicked="#clickRoue" onMouseMoved="#hoverRoue" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../ressources/images/roue.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="aiguille" fitHeight="192.0" fitWidth="50.0" layoutX="157.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../ressources/images/aiguille.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ImageView fx:id="retourButton" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="198.0" onMouseClicked="#clickRetour" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="175.0">
+         <image>
+            <Image url="@../../ressources/images/cancel_btn.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
